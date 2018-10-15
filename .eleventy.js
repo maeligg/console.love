@@ -21,7 +21,9 @@ module.exports = function(eleventyConfig) {
   // Create and randomise "sites" collection
   eleventyConfig.addCollection("sites", function(collection) {
     console.log(typeof collection.getFilteredByGlob("./sites/*.md"));
-    return collection.getFilteredByGlob("./sites/*.md");
+    return collection.getFilteredByGlob("./sites/*.md").sort(function() {
+      return 0.5 - Math.random();
+    });
   });
 
   eleventyConfig.addPassthroughCopy("favicon.ico");
