@@ -1,0 +1,25 @@
+{% extends "layouts/base.njk" %}
+{% block content %}
+
+    <header class="header">
+        <hgroup>
+            <h1><img src="assets/img/title.svg" alt="console.❤" class="title-image"/></h1>
+            <h2 class="tagline">A collection of <img src="assets/img/funny.svg" alt="funny" class="tagline-first-word">, <img src="assets/img/quirky.svg" alt="quirky"> and <img src="assets/img/lovely.svg" alt="lovely"> console messages from around the web</h2>
+        </hgroup>
+    </header>
+    <main class="main">
+        <ul class="container">
+            <div class="contribute">{{ content | safe }}</div>
+            <ul class="sites">
+                {% for site in collections.sites %}
+                    {% include "layouts/card.njk" %}
+                {% endfor %}
+            </ul>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p>Created by <a href="http://maelbrunet.com">Maël Brunet</a> - source code available on <a href="">GitHub</a>.</p>
+        </div>
+    </footer>
+{% endblock %}

@@ -1,0 +1,133 @@
+:root {
+  --dark-grey: #4f4f4f;
+  --grey: #bdbdbd;
+  --main: #6d81c5;
+  --bg: #eadbdb;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Avenir", "Avenir Next", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  background-color: var(--bg);
+  color: var(--dark-grey);
+}
+
+p {
+  margin-top: 0;
+}
+
+.header {
+  padding: 2rem;
+  background-color: var(--main);
+  text-align: center;
+}
+
+.title-image {
+  width: 500px;
+  max-width: 100%;
+}
+
+.tagline {
+  font-size: 1rem;
+  line-height: 2;
+  color: #fff;
+  font-weight: normal;
+}
+
+.tagline img {
+  position: relative;
+  top: 8px;
+  height: 1.5rem;
+  margin: 0 0.2rem;
+}
+
+@media (min-width: 600px) {
+  .tagline {
+    font-size: 1.5rem;
+  }
+
+  .tagline img {
+    top: 10px;
+    height: 2rem;
+  }
+}
+
+.tagline .tagline-first-word {
+  margin-right: 0;
+}
+
+.main {
+  padding: 2rem 0;
+}
+
+.container {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.contribute {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.sites {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  grid-gap: 2rem;
+  padding: 0;
+  list-style: none;
+}
+
+.site-url {
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border: 1px solid var(--grey);
+  border-radius: 10px;
+  background-color: #fff;
+  overflow: hidden;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.site-url:hover,
+.site-url:focus {
+  border: 1px solid var(--main);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.site-thumbnail-wrapper {
+  position: relative;
+  height: 100%;
+  background-color: #fff;
+}
+
+.site-thumbnail {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  height: calc(100% - 1rem);
+  width: calc(100% - 1rem);
+  object-fit: contain;
+}
+
+.site-title {
+  padding: 1rem;
+  text-align: center;
+  background-color: var(--main);
+}
+
+.footer {
+  text-align: center;
+}

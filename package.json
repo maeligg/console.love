@@ -1,0 +1,15 @@
+{
+  "name": "console.love",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eleventy.js",
+  "scripts": {
+    "serve": "npx eleventy --serve"
+  },
+  "author": "Maël Brunet",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.5.4",
+    "html-minifier": "^3.5.20"
+  }
+}
