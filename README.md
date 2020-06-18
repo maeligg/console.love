@@ -9,7 +9,7 @@ Want to add a new site? Follow these steps :
 
 2. Add a new `.md` file in `sites`.
 
-3. Take a screenshot of the console message, save it as a JPG, [minimise](https://tinyjpg.com/) it and add it to `assets\img\site-thumbnails\algolia.jpg`. 
+3. Take a screenshot of the console message, save it as a JPG, [minimise](https://tinyjpg.com/) it and add it to `assets/img/site-thumbnails`. 
 
 4. Fill out the following template :
 

@@ -1,8 +1,9 @@
 :root {
-  --dark-grey: #4f4f4f;
-  --grey: #bdbdbd;
-  --main: #6d81c5;
-  --bg: #eadbdb;
+  --dark-grey: hsl(0, 0%, 31%);
+  --grey: hsl(0, 0%, 74%);
+  --main: hsl(226, 43%, 60%);
+  --main-dark: hsl(226, 43%, 45%);
+  --bg: hsl(0, 43%, 96%);
 }
 
 *,
@@ -81,14 +82,20 @@ p {
 
 .sites {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-auto-rows: 15rem;
   grid-gap: 2rem;
+  justify-items: center;
   padding: 0;
   list-style: none;
 }
 
+.site {
+  width: 100%;
+}
+
 .site-url {
-  height: 15rem;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -103,8 +110,12 @@ p {
 
 .site-url:hover,
 .site-url:focus {
-  border: 1px solid var(--main);
+  border: 1px solid var(--main-dark);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.site-url:hover .site-title, .site-url:focus .site-title {
+  background-color: var(--main-dark);
 }
 
 .site-thumbnail-wrapper {
@@ -126,6 +137,7 @@ p {
   padding: 1rem;
   text-align: center;
   background-color: var(--main);
+  transition: background-color .2 ease-in-out;
 }
 
 .footer {
